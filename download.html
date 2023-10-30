@@ -7,7 +7,7 @@
     
 
     <!-- Curious what created these downloads? Check out https://hydraulic.dev -->
-    <meta name="generator" content="Conveyor: 11.100.5"/>
+    <meta name="generator" content="Conveyor: 11.100.6"/>
 
     <link rel=icon href="icon.svg" sizes="any" type="image/svg+xml">
     
@@ -15,10 +15,39 @@
     <title>E2e Test App Native</title>
 
     <style>
+        :root {
+            --backdrop: #f8f8f8;
+            --foreground: black;
+            --button-text: white;
+            --button-face: #01e675;
+            --pane-color: #fff;
+            --no-go-color: #f3f3f3;
+            --note-text: #3d3d3d;
+        }
+
+        
+        @media (prefers-color-scheme: dark) {
+        
+        
+        :root {
+            --backdrop: #44475A;
+            --foreground: #F8F8F2;
+            --button-text: #F8F8F2;
+            --button-face: #07e73f;
+            --pane-color: #282A36;
+            --no-go-color: #282A36;
+            --note-text: #c3c3c3;
+        }
+        
+        
+        }
+        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
             font-size: x-large;
-            background-color: #f8f8f8;
+            background-color: var(--backdrop);
+            color: var(--foreground);
         }
 
         html, body {
@@ -27,11 +56,15 @@
         }
 
         .download-button > svg > g > path {
-            fill: white;
+            fill: var(--button-text);
         }
 
         .download-button > svg {
             padding-right: 1em
+        }
+
+         .download-button:hover {
+            filter: brightness(1.02);
         }
 
         .container {
@@ -53,9 +86,9 @@
         @media only screen and (min-device-width: 768px) {
             .download-button {
                 align-items: center;
-                background-color: #01e675;
+                background-color: var(--button-face);
                 border-radius: 80px;
-                color: #fff !important;
+                color: var(--button-text) !important;
                 cursor: pointer;
                 display: inline-flex;
                 font-weight: 500;
@@ -70,7 +103,7 @@
 
             .pane {
                 align-items: center;
-                background-color: #fff;
+                background-color: var(--pane-color);
                 border-radius: 4px;
                 box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.3);
                 box-sizing: border-box;
@@ -116,7 +149,7 @@
         #no-go {
             padding: 2em;
             margin-top: 2em;
-            background-color: #f3f3f3;
+            background-color: var(--no-go-color);
         }
 
         #version {
@@ -160,7 +193,7 @@
             line-height: 200%;
             text-align: left;
             display: block;
-            color: #3d3d3d;
+            color: var(--note-text);
         }
 
         .note > * {
@@ -259,7 +292,7 @@
 
             <h1 id="title">E2e Test App Native</h1>
 
-            <span id="version">Version <span>2.0</span></span>
+            <span id="version">Version <span>1.0</span></span>
 
             <div id="pane-win">
                 
@@ -295,7 +328,7 @@
             <div id="pane-mac">
                 
                     <!-- Mac AMD64 -->
-                    <a id="mac-amd64" href="https://github.com/leo-hydraulic/e2e-test/releases/latest/download/e2e-test-app-native-2.0-mac-amd64.zip" class="download-button">
+                    <a id="mac-amd64" href="https://github.com/leo-hydraulic/e2e-test/releases/latest/download/e2e-test-app-native-1.0-mac-amd64.zip" class="download-button">
                         <svg width="2em" height="2em" viewBox="0 0 256 315" version="1.1" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" style="overflow:visible;">
                             <g transform="translate(0,-30)">
@@ -308,7 +341,7 @@
                     <br><br>
 
                     <!-- Mac ARM -->
-                    <a id="mac-aarch64" href="https://github.com/leo-hydraulic/e2e-test/releases/latest/download/e2e-test-app-native-2.0-mac-aarch64.zip" class="download-button">
+                    <a id="mac-aarch64" href="https://github.com/leo-hydraulic/e2e-test/releases/latest/download/e2e-test-app-native-1.0-mac-aarch64.zip" class="download-button">
                         <svg width="2em" height="2em" viewBox="0 0 256 315" version="1.1" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" style="overflow:visible;">
                             <g transform="translate(0,-30)">
